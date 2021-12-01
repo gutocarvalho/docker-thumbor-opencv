@@ -2,9 +2,9 @@
 
 Dockerfile for Thumbor 6.7.5 and OpenCV 4.2.0.32.
 
-Using python:2.7 base image.
+Using python 2.7 base image.
 
-## How to build
+## How to build it
 
     git clone https://github.com/gutocarvalho/docker-thumbor-opencv.git
     cd docker-thumbor-opencv
@@ -14,7 +14,7 @@ Using python:2.7 base image.
 
     docker run -d -p 8888:8888 docker-thumbor-opencv:0.0.1
 
-## How to use and test it in your browser
+## How to use and test it (in your browser)
 
 Rezise
 
@@ -63,10 +63,12 @@ About the project
 
 Documentation
 
-- https://thumbor.readthedocs.io/en/latest/index.html
-- https://thumbor.readthedocs.io/en/latest/installing.html
-- https://thumbor.readthedocs.io/en/latest/usage.html
-- https://thumbor.readthedocs.io/en/latest/customizing.html
+- https://thumbor.readthedocs.io/en/stable/index.html
+- https://thumbor.readthedocs.io/en/stable/installing.html
+- https://thumbor.readthedocs.io/en/stable/usage.html
+- https://thumbor.readthedocs.io/en/stable/customizing.html
+- https://thumbor.readthedocs.io/en/stable/filters.html
+- https://thumbor.readthedocs.io/en/stable/imaging.html
 
 ### OpenCV
 
