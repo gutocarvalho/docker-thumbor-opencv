@@ -49,3 +49,34 @@ More filters:
     https://thumbor.readthedocs.io/en/stable/filters.html
     
 :)
+
+## References
+
+### Thumbor
+
+Thumbor is a smart imaging service. It enables on-demand crop, resizing and flipping of images.
+
+About the project
+
+- https://github.com/thumbor/thumbor
+- https://github.com/thumbor/thumbor/releases/tag/6.7.5
+
+Documentation
+
+- https://thumbor.readthedocs.io/en/latest/index.html
+- https://thumbor.readthedocs.io/en/latest/installing.html
+- https://thumbor.readthedocs.io/en/latest/usage.html
+- https://thumbor.readthedocs.io/en/latest/customizing.html
+
+### OpenCV
+
+OpenCV (Open Source Computer Vision Library: http://opencv.org) is an open-source BSD-licensed library that includes several hundreds of computer vision algorithms
+
+About the project
+
+- https://opencv.org/
+- https://opencv.org/opencv-4-2-0/
+
+Documentation
+
+- https://docs.opencv.org/4.2.0/
