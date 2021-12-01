@@ -14,7 +14,7 @@ Using python:2.7 base image.
 
     docker run -d -p 8888:8888 docker-thumbor-opencv:0.0.1
 
-## How to use test it in your browser
+## How to use and test it in your browser
 
 Rezise
 
