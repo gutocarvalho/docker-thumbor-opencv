@@ -18,6 +18,8 @@ RUN apt-get update && \
                     libboost-python-dev \
                     libpng-dev \
                     libtiff-dev \
+                    libcairo2-dev \
+                    libimage-exiftool-perl \
                     libmemcached-dev \
                     libmagick++-dev \
                     libopencv-dev \
@@ -25,19 +27,21 @@ RUN apt-get update && \
                     libcurl4-openssl-dev \
                     && apt-get clean
 
+
 ## thumbor dependencies
 
 RUN apt-get install -y -q \
                         curl \
                         gifsicle \
+                        imagemagick \
                         libjpeg-turbo-progs \
                         graphicsmagick \
-                        pngcrush gifsicle \
+                        pngcrush \
                         && apt-get clean
 
-RUN pip2 install --upgrade pip
+RUN pip2 install --no-cache-dir --upgrade pip
 
-RUN pip2 install opencv-python==${OPENCV_VERSION} opencv-engine thumbor==${THUMBOR_VERSION} thumbor-plugins
+RUN pip2 install --no-cache-dir opencv-python==${OPENCV_VERSION} opencv-engine thumbor==${THUMBOR_VERSION} thumbor-plugins
 
 ###
 ### Building the final image
@@ -55,7 +59,9 @@ RUN apt-get update && apt-get install -y -q \
                         libjpeg-turbo-progs \
                         graphicsmagick \
                         pngcrush gifsicle \
-                        && apt-get clean
+                        && apt-get clean \
+                        && rm -rf /var/lib/apt/lists/*
+
 
 RUN ln -s /usr/bin/pngcrush /usr/local/bin/pngcrush
 
