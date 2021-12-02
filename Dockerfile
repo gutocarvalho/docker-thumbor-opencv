@@ -1,4 +1,8 @@
-FROM python:2.7
+###
+### Building thumbor and opencv
+###
+
+FROM python:2.7 as build
 
 ENV THUMBOR_VERSION 6.7.5
 ENV OPENCV_VERSION 4.2.0.32
@@ -34,6 +38,24 @@ RUN apt-get install -y -q \
 RUN pip2 install --upgrade pip
 
 RUN pip2 install opencv-python==${OPENCV_VERSION} opencv-engine thumbor==${THUMBOR_VERSION} thumbor-plugins
+
+###
+### Building the final image
+###
+
+FROM python:2.7
+
+COPY --from=build /usr/local/lib/python2.7/ /usr/local/lib/python2.7/
+COPY --from=build /usr/local/lib /usr/local/lib
+COPY --from=build /usr/local/bin /usr/local/bin
+
+RUN apt-get update && apt-get install -y -q \
+                        curl \
+                        gifsicle \
+                        libjpeg-turbo-progs \
+                        graphicsmagick \
+                        pngcrush gifsicle \
+                        && apt-get clean
 
 RUN ln -s /usr/bin/pngcrush /usr/local/bin/pngcrush
 
