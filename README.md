@@ -14,37 +14,89 @@ Using python 2.7 base image.
 
     docker run -d -p 8888:8888 docker-thumbor-opencv:0.0.1
 
-## How to use and test it (in your browser)
+## How to test filters (in your browser)
 
-Rezise
+### Rezise
+
+Testing resize to 200x200
 
     http://127.0.0.1:8888/unsafe/200x200/https://gutocarvalho.net/media/website/responsive/guto-lg.png
 
-Blur
+## Blur
+
+Testing Blur (5)
 
     http://127.0.0.1:8888/unsafe/200x200/filters:blur(5)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
+
+## Quality
+
+Testing Quality (40)
+
+    http://127.0.0.1:8888/unsafe/200x200/filters:quality(40)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
+
+## Contrast
+
+Testing Contrast (40)
+
+    http://127.0.0.1:8888/unsafe/200x200/filters:contrat(40)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
+
+## brightness
+
+Testing brightness (50)
+
+    http://127.0.0.1:8888/unsafe/200x200/filters:brightness(50)(5)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
+
+## Fill
+
+Fill blue
+
+    http://127.0.0.1:8888/unsafe/fit-in/200x200/filters:fill(blue)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
     
-Grayscale
+## Grayscale
 
-    http://127.0.0.1:8888/unsafe/200x200/filters:grayscale()/https://gutocarvalho.net/media/website/responsive/guto-lg.png
+Testing Graysacle
+
+    (http://127.0.0.1:8888/unsafe/200x200/filters:grayscale()/https://gutocarvalho.net/media/website/responsive/guto-lg.png
     
-Rotate 90º
+## Rotation
 
-    http://127.0.0.1:8888/unsafe/200x200/filters:rotate(90)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
+Testing rotate 90º
 
-Rotate 180º
+    Testing rotate 90º](http://127.0.0.1:8888/unsafe/200x200/filters:rotate(90)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
 
-    http://127.0.0.1:8888/unsafe/200x200/filters:rotate(180)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
-    
+Testing rotate 180º
+
+    (http://127.0.0.1:8888/unsafe/200x200/filters:rotate(180)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
+
+## Conversion
+
 Converting to webp
 
-    http://127.0.0.1:8888/unsafe/200x200/filters:format(webp)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
-    
+     http://127.0.0.1:8888/unsafe/200x200/filters:format(webp)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
+
+Converting to jpeg
+
+     http://127.0.0.1:8888/unsafe/200x200/filters:format(jpeg)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
+
+Converting to gif
+
+    http://127.0.0.1:8888/unsafe/200x200/filters:format(gif)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
+
+## Equalize
+
+Converting to jpeg
+
+    http://127.0.0.1:8888/unsafe/200x200/filters:equalize()/https://gutocarvalho.net/media/website/responsive/guto-lg.png
+
+## Rounded Corner
+
 Rounded Corner
 
-    http://127.0.0.1:8888/unsafe/400x300/filters:round_corner(20|70,0,0,0)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
+     http://127.0.0.1:8888/unsafe/200x200/filters:round_corner(150|255,255,255,255)/https://gutocarvalho.net/media/website/responsive/guto-lg.png
 
-More filters: 
+Open the testing.md file to test!
+
+## More filters
 
     https://thumbor.readthedocs.io/en/stable/filters.html
     
