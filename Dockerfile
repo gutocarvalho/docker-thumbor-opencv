@@ -4,7 +4,7 @@
 
 FROM python:2.7 as build
 
-MAINTAINER Guto Carvalho (contato@gutocarvalho.net)
+MAINTAINER Guto Carvalho (guto@nativetrail.io)
 
 ENV THUMBOR_VERSION 6.7.5
 ENV OPENCV_VERSION 4.2.0.32
