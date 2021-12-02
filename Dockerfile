@@ -60,7 +60,7 @@ RUN apt-get update && apt-get install -y -q \
                         gifsicle \
                         libjpeg-turbo-progs \
                         graphicsmagick \
-                        pngcrush gifsicle \
+                        pngcrush \
                         && apt-get clean \
                         && rm -rf /var/lib/apt/lists/*
 
